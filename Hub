@@ -1,0 +1,295 @@
+game.StarterGui:SetCore("SendNotification",  {
+
+ Title = "HEY!";
+
+ Text = "TRIP HUB WORK IN HOOD MODDED";
+
+ Icon = "9588547114";
+
+ Duration = 10;
+
+ Button1 = "ok";
+
+ Callback = NotificationBindable;
+
+})
+
+game.StarterGui:SetCore("SendNotification",  {
+
+ Title = "oye!";
+
+ Text = "trip hub solo funciona en hood modded";
+
+ Icon = "https://www.roblox.com/library/9588547114/Trip-hub";
+
+ Duration = 7;
+
+ Button1 = "ok";
+
+ Callback = NotificationBindable;
+
+})
+
+wait(5)
+
+if game.PlaceId == 5602055394 then
+
+    
+
+print ("trip hub activado")
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+local Window = Library.CreateLib("trip hub", "DarkTheme")
+
+local Tab = Window:NewTab("scripts")
+
+local Section = Tab:NewSection("Scripts basic")
+
+local Section = Tab:NewSection("scripts made by emiliano")
+
+Section:NewButton("esp", "ver donde están las personas", function()
+
+    print("se ah activado esp!")
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true))()
+
+end)
+
+Section:NewButton("anti lag", "quitar el lag", function()
+
+    print("se ah activado anti lag!")
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))();
+
+end)
+
+Section:NewButton("speed bypass", "has click para que te des un impulso", function()
+
+    print("se ah activado speed bypass! ")
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/madebyemiliano/main/Speed%20bypass",true))()
+
+end)
+
+Section:NewButton("infinite jumps", "saltos infinitos", function()
+
+ 
+
+local Players = game:GetService("Players")
+
+local lp = Players.LocalPlayer
+
+local mouse = lp:GetMouse()
+
+local uis = game:GetService("UserInputService")
+
+local rservice = game:GetService("RunService")
+
+local cam = workspace.CurrentCamera
+
+local NormalGravity = game.Workspace.Gravity
+
+local Raw = getrawmetatable(game)
+
+local Caller = checkcaller or is_protosmasher_caller or Cer.isCerus
+
+local CallingScript = getcallingscript or get_calling_script
+
+local Closure = newcclosure or read_me or function(Func) return Func end
+
+local CallingMethod = getnamecallmethod or get_namecall_method
+
+setreadonly(Raw,false)
+
+local NewIndex = Raw.__newindex;
+
+Raw.__newindex = Closure(function(self,Property,Value)
+
+	if Caller() then return NewIndex(self,Property,Value) end	if Property == "JumpPower" then return 50 end 
+
+	if self == workspace and Property == "Gravity" then return NormalGravity end
+
+	if Property == "CFrame" and self:IsDescendantOf(lp.Character) then return end 
+
+	return NewIndex(self,Property,Value)
+
+end)
+
+    
+
+    
+
+end)
+
+Section:NewButton("jump fly", "Salta para volar", function()
+
+    local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+	if InfiniteJumpEnabled then
+
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+	end
+
+end)
+
+local Players = game:GetService("Players")
+
+local lp = Players.LocalPlayer
+
+local mouse = lp:GetMouse()
+
+local uis = game:GetService("UserInputService")
+
+local rservice = game:GetService("RunService")
+
+local cam = workspace.CurrentCamera
+
+local NormalGravity = game.Workspace.Gravity
+
+local Raw = getrawmetatable(game)
+
+local Caller = checkcaller or is_protosmasher_caller or Cer.isCerus
+
+local CallingScript = getcallingscript or get_calling_script
+
+local Closure = newcclosure or read_me or function(Func) return Func end
+
+local CallingMethod = getnamecallmethod or get_namecall_method
+
+setreadonly(Raw,false)
+
+local NewIndex = Raw.__newindex;
+
+Raw.__newindex = Closure(function(self,Property,Value)
+
+	if Caller() then return NewIndex(self,Property,Value) end
+
+	if Property == "JumpPower" then return 50 end 
+
+	if self == workspace and Property == "Gravity" then return NormalGravity end
+
+	if Property == "CFrame" and self:IsDescendantOf(lp.Character) then return end 
+
+	return NewIndex(self,Property,Value)
+
+end)
+
+end)
+
+Section:NewButton("aim ware", "aim lock", function()
+
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+
+end)
+
+Section:NewButton("trash talk", "click para enviar mensajes rápidos", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/script/main/Trash%20gui",true))()
+
+end)
+
+Section:NewButton("cursor custom", "guia para las balas", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/cursor/main/Cp", true))()
+
+end)
+
+Section:NewButton("server finder", "buscador de sevidores", function()
+
+    loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
+
+end)
+
+local Tab = Window:NewTab("other hubs")
+
+local Section = Tab:NewSection("hubs for hood modded")
+
+Section:NewButton("trip gui", "trip gui", function()
+
+    loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\71\97\109\101\114\69\109\105\108\105\97\110\111\70\70\47\116\114\105\112\47\109\97\105\110\47\71\117\105\10'))()
+
+end)
+
+Section:NewButton("soft vortex", "soft vortex", function()
+
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/Airsoft0001/69/main/69"),true))()
+
+end)
+
+Section:NewButton("Oblivion", "oblivion", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CorruptOblivion/Oblivion/main/loader.lua"))()
+
+end)
+
+Section:NewButton("Crimskid DHM ", "Crimskid DHM ", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/finobe7650/dhm/main/crimskid"))()
+
+end)
+
+local Tab = Window:NewTab("fov")
+
+local Section = Tab:NewSection("fovs")
+
+Section:NewButton("fov 70", "fov 70", function()
+
+   local FOV = 70
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+Section:NewButton("fov 80", "fov 80 ", function()
+
+    local FOV = 80
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+Section:NewButton("fov 90", "fov 90", function()
+
+    local FOV = 90
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+Section:NewButton("fov 100", "fov 100", function()
+
+    local FOV = 100
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+Section:NewButton("fov 110", "fov 110", function()
+
+    local FOV = 110
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+Section:NewButton("fov 120", "fov 120", function()
+
+    local FOV = 120
+
+game.Workspace.Camera.FieldOfView = FOV
+
+end)
+
+local Tab = Window:NewTab("credits")
+
+local Section = Tab:NewSection("creditos")
+
+Section:NewLabel("made by emiliano and lara")
+
+local Section = Tab:NewSection("discord     https://discord.gg/Y2y9f8H4")
+
+end
