@@ -34,6 +34,9 @@ game.StarterGui:SetCore("SendNotification",  {
 
 if game.PlaceId == 5602055394 then
 end
+
+
+
 wait(5)
 
     
