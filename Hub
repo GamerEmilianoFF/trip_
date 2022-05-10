@@ -1,3 +1,5 @@
+
+
 game.StarterGui:SetCore("SendNotification",  {
 
  Title = "HEY!";
@@ -30,9 +32,9 @@ game.StarterGui:SetCore("SendNotification",  {
 
 })
 
-wait(5)
-
 if game.PlaceId == 5602055394 then
+
+wait(5)
 
     
 
@@ -40,7 +42,7 @@ print ("trip hub activado")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("trip hub", "DarkTheme")
+local Window = Library.CreateLib("trip hub", "Midnight")
 
 local Tab = Window:NewTab("scripts")
 
@@ -48,11 +50,9 @@ local Section = Tab:NewSection("Scripts basic")
 
 local Section = Tab:NewSection("scripts made by emiliano")
 
-Section:NewButton("esp", "ver donde están las personas", function()
+Section:NewButton("fps booster", "fps booster", function()
 
-    print("se ah activado esp!")
-
-    loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true))()
+   loadstring(game:HttpGet("https://pastebin.com/raw/2MqFBmsU", true))()
 
 end)
 
@@ -106,7 +106,9 @@ local NewIndex = Raw.__newindex;
 
 Raw.__newindex = Closure(function(self,Property,Value)
 
-	if Caller() then return NewIndex(self,Property,Value) end	if Property == "JumpPower" then return 50 end 
+	if Caller() then return NewIndex(self,Property,Value) end
+
+	if Property == "JumpPower" then return 50 end 
 
 	if self == workspace and Property == "Gravity" then return NormalGravity end
 
@@ -176,13 +178,7 @@ Raw.__newindex = Closure(function(self,Property,Value)
 
 	return NewIndex(self,Property,Value)
 
-end)
-
-end)
-
-Section:NewButton("aim ware", "aim lock", function()
-
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+end) 
 
 end)
 
@@ -284,6 +280,82 @@ game.Workspace.Camera.FieldOfView = FOV
 
 end)
 
+local Tab = Window:NewTab("aim lock")
+
+local Section = Tab:NewSection("aim locks")
+
+Section:NewButton("aim ware (q)", "para activar aplasta la tecla q", function()
+
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/s1mple/main/LIXO"))()
+
+end)
+
+Section:NewButton("aimbot", "aimbot", function()
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/1Gp9c57U"))()
+
+end)
+
+local Tab = Window:NewTab("anti kick")
+
+local Section = Tab:NewSection("anti kicks")
+
+Section:NewButton("anti kick", "anti kick", function()
+
+    print("anti kick active")
+
+end)
+
+Section:NewButton("anti ban", "anti ban", function()
+
+    print("anti ban active")
+
+end)
+
+local Tab = Window:NewTab("esp")
+
+local Section = Tab:NewSection("esp")
+
+Section:NewButton("esp", "ver donde están las personas", function()
+
+    print("se ah activado esp!")
+
+    loadstring(game:HttpGet("https://pastebin.com/raw/zKjj0TQD", true))()
+
+end)
+
+Section:NewButton("esp v2", "esp v2", function()
+
+-- script here
+
+end)
+
+local Tab = Window:NewTab("client")
+
+local Section = Tab:NewSection("client scripts")
+
+Section:NewButton("headlees", "headlees no fe", function()
+
+    game.Players.LocalPlayer.Character.Head.Transparency = 1
+
+for i,v in pairs(game.Players.LocalPlayer.Character.Head:GetChildren()) do
+
+if (v:IsA("Decal")) then
+
+v:Destroy()
+
+end
+
+end
+
+end)
+
+Section:NewButton("korblox", "korblox no fe", function()
+
+    game.Players.LocalPlayer.Character['Right Leg']:remove()
+
+end)
+
 local Tab = Window:NewTab("credits")
 
 local Section = Tab:NewSection("creditos")
@@ -291,5 +363,3 @@ local Section = Tab:NewSection("creditos")
 Section:NewLabel("made by emiliano and lara")
 
 local Section = Tab:NewSection("discord     https://discord.gg/Y2y9f8H4")
-
-end
