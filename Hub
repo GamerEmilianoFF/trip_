@@ -1,5 +1,6 @@
 
 
+
 game.StarterGui:SetCore("SendNotification",  {
 
  Title = "HEY!";
@@ -33,19 +34,16 @@ game.StarterGui:SetCore("SendNotification",  {
 })
 
 if game.PlaceId == 5602055394 then
+
+wait(3)
 end
-
-
-
-wait(5)
-
     
 
 print ("trip hub activado")
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("trip hub", "Midnight")
+local Window = Library.CreateLib("TRIP HUB [👑]", "Midnight")
 
 local Tab = Window:NewTab("scripts")
 
@@ -207,11 +205,17 @@ local Tab = Window:NewTab("other hubs")
 
 local Section = Tab:NewSection("hubs for hood modded")
 
+
+Section:NewLabel("GUI FOR MOB")
+
 Section:NewButton("trip gui", "trip gui", function()
 
     loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\71\97\109\101\114\69\109\105\108\105\97\110\111\70\70\47\116\114\105\112\47\109\97\105\110\47\71\117\105\10'))()
 
 end)
+
+Section:NewLabel("HUBS FOR PC")
+Section:NewLabel("SOLO PARA PC")
 
 Section:NewButton("soft vortex", "soft vortex", function()
 
@@ -363,6 +367,14 @@ local Tab = Window:NewTab("credits")
 
 local Section = Tab:NewSection("creditos")
 
-Section:NewLabel("made by emiliano and lara")
+Section:NewLabel("made by *Emiliano*#2061 and val#9767")
 
-local Section = Tab:NewSection("discord     https://discord.gg/Y2y9f8H4")
+local Section = Tab:NewSection("join to server https://discord.gg/Y2y9f8H4")
+
+
+local Tab = Window:NewTab("inf")
+local Section = Tab:NewSection("                              INFORMATION!")
+Section:NewLabel("IF YOU GOT BANNED WRITE ME ON DISCORD")
+Section:NewLabel(" MAYBE I CAN HELP YOU")
+
+
