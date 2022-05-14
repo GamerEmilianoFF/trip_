@@ -1,7 +1,8 @@
+wait(2)
 
 local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
 
-local Window = Library.CreateLib("TRIP HUB [👑]", "Midnight")
+local Window = Library.CreateLib("TRIP HUB [👑]", "Sentinel")
 
 local Tab = Window:NewTab("scripts")
 
@@ -9,25 +10,9 @@ local Section = Tab:NewSection("scripts")
 
 Section:NewButton("Reset", "Just wait ! ", function()
 
-   
-
 loadstring(game:HttpGet('https://pastebin.com/raw/Zr25UEXi'))()
 
     end)
-
-Section:NewButton("fps booster", "fps booster", function()
-
-   loadstring(game:HttpGet("https://pastebin.com/raw/2MqFBmsU", true))()
-
-end)
-
-Section:NewButton("anti lag", "quitar el lag", function()
-
-    print("se ah activado anti lag!")
-
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))();
-
-end)
 
 Section:NewButton("speed bypass", "has click para que te des un impulso", function()
 
@@ -38,8 +23,6 @@ Section:NewButton("speed bypass", "has click para que te des un impulso", functi
 end)
 
 Section:NewButton("infinite jumps", "saltos infinitos", function()
-
- 
 
 local Players = game:GetService("Players")
 
@@ -82,10 +65,6 @@ Raw.__newindex = Closure(function(self,Property,Value)
 	return NewIndex(self,Property,Value)
 
 end)
-
-    
-
-    
 
 end)
 
@@ -159,39 +138,7 @@ Section:NewButton("server finder", "buscador de sevidores", function()
 
 end)
 
-Section:NewButton("Unban", "Use this script first when you want to execute God mode.", function()
-
-   
-
-game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
-
-game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
-
-    Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):WaitForChild("Dead"):Remove()
-
-    Instance.new("BoolValue",game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects")).Name = ("Dead")
-
-    repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("HeadScale").Value = 1
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
-
-    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
-
-end)
-
-end)
-
 Section:NewButton("Headless", "Client Sided", function()
-
-    
 
 game.Players.LocalPlayer.Character.Head.Transparency = 1
 
@@ -248,8 +195,6 @@ loadstring(game:HttpGet('https://pastebin.com/raw/P90LrpCG'))()
 end)
 
 Section:NewButton("No fog", "Remove all shadow and more..", function()
-
-   
 
 loadstring(game:HttpGet("https://pastebin.com/raw/06iG6YkU", true))()
 
@@ -373,8 +318,6 @@ Section:NewButton("cursor white +", "cursor", function()
 
 wait(2)
 
-   
-
     -- get good aim
 
 -- ez
@@ -417,7 +360,7 @@ local Tab = Window:NewTab("Aimlock")
 
 local Section = Tab:NewSection("Aimlock")
 
-Section:NewButton("Aim Tools", "Tools Lock", function()
+Section:NewButton("Aim tool for mob", "Tools Lock", function()
 
    
 
@@ -425,7 +368,7 @@ loadstring(game:HttpGet('https://pastebin.com/raw/HA8kAiYp'))()
 
 end)
 
-Section:NewButton("Aimbot", "Aimbot", function()
+Section:NewButton("aim ware (q)", "Aimbot", function()
 
    
 
@@ -433,447 +376,9 @@ loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Hyotinhofofinho/
 
 end)
 
-Section:NewButton("Aimlock (Q)", "Just Click The Script Dumb", function()
+Section:NewButton("aim lock (k)", "aim lock", function()
 
-   
-
-local ScreenGui = Instance.new("ScreenGui")
-
-local TextLabel = Instance.new("TextLabel")
-
---Properties:
-
-ScreenGui.Parent = game.CoreGui
-
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-_G.KEY = "q"
-
-_G.PART = "HumanoidRootPart"
-
-_G.PRED = 0.131
-
-_G.Frame = Vector3.new(0,0.53,0)
-
-local CC = game:GetService "Workspace".CurrentCamera
-
-local Plr
-
-local enabled = false
-
-local accomidationfactor = nil
-
-local mouse = game.Players.LocalPlayer:GetMouse()
-
-local placemarker = Instance.new("Part", game.Workspace)
-
-local guimain = Instance.new("Folder", game.CoreGui)
-
-function makemarker(Parent, Adornee, Color, Size, Size2)
-
-    local e = Instance.new("BillboardGui", Parent)
-
-    e.Name = "PP"
-
-    e.Adornee = Adornee
-
-    e.Size = UDim2.new(Size, Size2, Size, Size2)
-
-    e.AlwaysOnTop = true
-
-    local a = Instance.new("Frame", e)
-
-    a.Size = UDim2.new(4, 0, 4, 0)
-
-    a.BackgroundTransparency = 0.1
-
-    a.BackgroundColor3 = Color
-
-    local g = Instance.new("UICorner", a)
-
-    g.CornerRadius = UDim.new(50, 50)
-
-    return (e)
-
-end
-
-local data = game.Players:GetPlayers()
-
-function noob(player)
-
-    local character
-
-    repeat
-
-        wait()
-
-    until player.Character
-
-    local handler = makemarker(guimain, player.Character:WaitForChild(_G.PART), Color3.fromRGB(255, 255, 255), 0.0, 0)
-
-    handler.Name = player.Name
-
-    player.CharacterAdded:connect(
-
-        function(Char)
-
-            handler.Adornee = Char:WaitForChild(_G.PART)
-
-        end
-
-    )
-
-    local TextLabel = Instance.new("TextLabel", handler)
-
-    TextLabel.BackgroundTransparency = 1
-
-    TextLabel.Position = UDim2.new(0, 0, 0, -50)
-
-    TextLabel.Size = UDim2.new(0, 100, 0, 100)
-
-    TextLabel.Font = Enum.Font.SourceSansSemibold
-
-    TextLabel.TextSize = 14
-
-    TextLabel.TextColor3 = Color3.new(1, 1, 1)
-
-    TextLabel.TextStrokeTransparency = 0
-
-    TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
-
-    TextLabel.Text = "Name: " .. player.Name
-
-    TextLabel.ZIndex = 10
-
-    spawn(
-
-        function()
-
-            while wait() do
-
-                if player.Character then
-
-                --TextLabel.Text = player.Name.." | Bounty: "..tostring(player:WaitForChild("leaderstats").Wanted.Value).." | "..tostring(math.floor(player.Character:WaitForChild("Humanoid").Health))
-
-                end
-
-            end
-
-        end
-
-    )
-
-end
-
-for i = 1, #data do
-
-    if data[i] ~= game.Players.LocalPlayer then
-
-        noob(data[i])
-
-    end
-
-end
-
-game.Players.PlayerAdded:connect(
-
-    function(Player)
-
-        noob(Player)
-
-    end
-
-)
-
-game.Players.PlayerRemoving:Connect(
-
-    function(player)
-
-        guimain[player.Name]:Destroy()
-
-    end
-
-)
-
-spawn(
-
-    function()
-
-        placemarker.Anchored = true
-
-        placemarker.CanCollide = false
-
-        placemarker.Size = Vector3.new(0.1, 0.1, 0.1)
-
-        placemarker.Transparency = 0.1
-
-        makemarker(placemarker, placemarker, Color3.fromRGB(255, 255, 255), 0.20, 0)
-
-    end
-
-)
-
-mouse.KeyDown:Connect(
-
-    function(k)
-
-        if k ~= _G.KEY then
-
-            return
-
-        end
-
-        if enabled then
-
-            -- guimain[Plr.Name].Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-
-            enabled = false
-
-            TextLabel.TextColor3 = Color3.fromRGB(255, 20, 75)
-
-            TextLabel.Text = "------"
-
-        else
-
-            --guimain[Plr.Name].Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-
-            enabled = true
-
-            Plr = getClosestPlayerToCursor()
-
-            TextLabel.TextColor3 = Color3.fromRGB(12, 255, 0)
-
-            TextLabel.Text = Plr.Character.Humanoid.DisplayName
-
-        end
-
-    end)
-
-function getClosestPlayerToCursor()
-
-    local closestPlayer
-
-    local shortestDistance = math.huge
-
-    for i, v in pairs(game.Players:GetPlayers()) do
-
-        if
-
-            v ~= game.Players.LocalPlayer and v.Character and v.Character:FindFirstChild("Humanoid") and
-
-                v.Character.Humanoid.Health ~= 0 and
-
-                v.Character:FindFirstChild(_G.PART)
-
-         then
-
-            local pos = CC:WorldToViewportPoint(v.Character.PrimaryPart.Position)
-
-            local magnitude = (Vector2.new(pos.X, pos.Y) - Vector2.new(mouse.X, mouse.Y)).magnitude
-
-            if magnitude < shortestDistance then
-
-                closestPlayer = v
-
-                shortestDistance = magnitude
-
-            end
-
-        end
-
-    end
-
-    return closestPlayer
-
-end
-
-game:GetService "RunService".Stepped:connect(
-
-    function()
-
-        if enabled and Plr.Character and Plr.Character:FindFirstChild(_G.PART) then
-
-            placemarker.CFrame =
-
-                CFrame.new(Plr.Character[_G.PART].Position + _G.Frame + (Plr.Character[_G.PART].Velocity * accomidationfactor))
-
-        else
-
-            placemarker.CFrame = CFrame.new(0, 9999, 0)
-
-        end
-
-    end
-
-)
-
-local mt = getrawmetatable(game)
-
-local old = mt.__namecall
-
-setreadonly(mt, false)
-
-mt.__namecall =
-
-    newcclosure(
-
-    function(...)
-
-        local args = {...}
-
-        if enabled and getnamecallmethod() == "FireServer" and args[2] == "UpdateMousePos" then
-
-            args[3] = Plr.Character[_G.PART].Position+ _G.Frame + (Plr.Character[_G.PART].Velocity * accomidationfactor)
-
-            return old(unpack(args))
-
-        end
-
-        return old(...)
-
-    end
-
-)
-
-game.Players.LocalPlayer.Chatted:Connect(
-
-    function(Chat)
-
-        if Chat == "print" then
-
-            print(_G.PRED)
-
-        end
-
-    end
-
-)
-
-game.Players.LocalPlayer.Chatted:Connect(
-
-    function(Chat)
-
-        if Chat == "Code:1029" then
-
-            _G.KEY = nil
-
-            _G.AIR = nil
-
-            _G.PART = nil
-
-            _G.PRED = nil
-
-            TextLabel.Visible = false
-
-        end
-
-    end
-
-)
-
-game.Players.LocalPlayer.Chatted:Connect(
-
-    function(Chat)
-
-        if Chat == "Code:1030" then
-
-            _G.KEY = "q"
-
-            _G.AIR = 0.00005
-
-            _G.PART = "LowerTorso"
-
-            _G.PRED = 0.029
-
-            TextLabel.Visible = true
-
-        end
-
-    end
-
-)
-
-game.Players.LocalPlayer.Chatted:Connect(
-
-    function(Chat)
-
-        if Chat == "P+" then
-
-            _G.PRED = _G.PRED+0.001
-
-        end
-
-    end
-
-)
-
-game.Players.LocalPlayer.Chatted:Connect(
-
-    function(Chat)
-
-        if Chat == "P-" then
-
-            _G.PRED = _G.PRED-0.001
-
-        end
-
-    end
-
-)
-
-while wait() do
-
-    --[[
-
-    if getClosestPlayerToCursor().Character.Humanoid.FloorMaterial == Enum.Material.Air then
-
-        accomidationfactor = _G.AIR
-
-        print("jump 1")
-
-    else
-
-        local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-
-        local Value = tostring(ping)
-
-        local pingValue = Value:split(" ")
-
-        local PingNumber = pingValue[1]
-
-        accomidationfactor = PingNumber / 1000 + 0.016
-
-    end
-
-    ]]
-
-    if getClosestPlayerToCursor().Character.Humanoid.Jump == true and getClosestPlayerToCursor().Character.Humanoid.FloorMaterial == Enum.Material.Air then
-
-        _G.Frame = Vector3.new(0,-2.3,0)
-
-wait(0.05)
-
-    else
-
-        local ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
-
-        local Value = tostring(ping)
-
-        local pingValue = Value:split(" ")
-
-        local PingNumber = pingValue[1]
-
-        
-
-        accomidationfactor = PingNumber / 1000 + _G.PRED
-
-        _G.Frame = Vector3.new(0,0.53,0)
-
-    end
-
-    
-
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/aim/main/Lock",true))()
 
 end)
 
@@ -975,9 +480,131 @@ Section:NewButton("anti kick", "anti kick", function()
 
 end)
 
-Section:NewButton("anti ban", "anti ban", function()
+Section:NewButton("anti ban", "Use this script first when you want to execute God mode.", function()
 
-    print("anti ban active")
+   
+
+game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
+
+game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function()
+
+    Instance.new("Folder",game:GetService("Players").LocalPlayer.Character).Name = ("FULLY_LOADED_CHAR")
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):WaitForChild("Dead"):Remove()
+
+    Instance.new("BoolValue",game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects")).Name = ("Dead")
+
+    repeat wait() until game:GetService("Players").LocalPlayer.Character:WaitForChild("BodyEffects"):findFirstChild("Dead")
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyWidthScale").Value = 0.5
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("HeadScale").Value = 1
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyHeightScale").Value = 1
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyDepthScale").Value = 0.5
+
+    game:GetService("Players").LocalPlayer.Character:WaitForChild("Humanoid"):WaitForChild("BodyTypeScale").Value = 0.01
+
+end)
+
+end)
+
+local Tab = Window:NewTab("Anti lag")
+
+local Section = Tab:NewSection("Anti lags")
+
+Section:NewButton("fps booster", "fps booster", function()
+
+   loadstring(game:HttpGet("https://pastebin.com/raw/2MqFBmsU", true))()
+
+end)
+
+Section:NewButton("Anti lag (-20 fps)", "ButtonInfo", function()
+
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerEmilianoFF/anti-lag-v2-fps/main/Dhm",true))()
+
+end)
+
+Section:NewButton("Anti lag (-50 fps)", "ButtonInfo", function()
+
+    workspace:FindFirstChildOfClass('Terrain').WaterWaveSize = 0
+
+	workspace:FindFirstChildOfClass('Terrain').WaterWaveSpeed = 0
+
+	workspace:FindFirstChildOfClass('Terrain').WaterReflectance = 0
+
+	workspace:FindFirstChildOfClass('Terrain').WaterTransparency = 0
+
+	game:GetService("Lighting").GlobalShadows = false
+
+	game:GetService("Lighting").FogEnd = 9e9
+
+	settings().Rendering.QualityLevel = 1
+
+	for i,v in pairs(game:GetDescendants()) do
+
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+
+			v.Material = "Plastic"
+
+			v.Reflectance = 0
+
+		elseif v:IsA("Decal") then
+
+			v.Transparency = 1
+
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+
+			v.Lifetime = NumberRange.new(0)
+
+		elseif v:IsA("Explosion") then
+
+			v.BlastPressure = 1
+
+			v.BlastRadius = 1
+
+		end
+
+	end
+
+	for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
+
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+
+			v.Enabled = false
+
+		end
+
+	end
+
+	workspace.DescendantAdded:Connect(function(child)
+
+		coroutine.wrap(function()
+
+			if child:IsA('ForceField') then
+
+				game:GetService('RunService').Heartbeat:Wait()
+
+				child:Destroy()
+
+			elseif child:IsA('Sparkles') then
+
+				game:GetService('RunService').Heartbeat:Wait()
+
+				child:Destroy()
+
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+
+				game:GetService('RunService').Heartbeat:Wait()
+
+				child:Destroy()
+
+			end
+
+		end)()
+
+	end)
 
 end)
 
@@ -1075,11 +702,6 @@ Section:NewLabel("made by *Emiliano*#2061 and val#9767")
 
 local Section = Tab:NewSection("join to server https://discord.gg/Y2y9f8H4")
 
-local Tab = Window:NewTab("inf")
 
-local Section = Tab:NewSection("                              INFORMATION!")
 
-Section:NewLabel("IF YOU GOT BANNED WRITE ME ON DISCORD")
-
-Section:NewLabel(" MAYBE I CAN HELP YOU")
 
